@@ -1,11 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  hello from html
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide Show</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Slide Show</h1>
+    </header>
+    <main>
+      <nav id="menu">
+        <button class="menu-button">menu</button>
+        <ul class="drop-down-menu hidden">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Slide Show</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <div class="slide-show">
+        <button class="previous-image">&larr;</button>
+        <div class="slide-frame">
+          <div class="slides-container">
+            <img src="images/01.jpg" alt="" />
+            <img src="images/02.jpg" alt="" />
+            <img src="images/03.jpg" alt="" />
+            <img src="images/04.jpg" alt="" />
+            <img src="images/05.jpg" alt="" />
+          </div>
+        </div>
+        <button class="next-image">&rarr;</button>
+      </div>
+    </main>
+    <footer>
+      <small>made by c8in4</small>
+    </footer>
+  </body>
 </html>

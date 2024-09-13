@@ -32,3 +32,68 @@ section,
 article {
   container-type: inline-size;
 }
+
+body {
+  min-height: 100dvh;
+  max-width: 100dvw;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  flex: 1;
+}
+
+.slide-show {
+  display: flex;
+  justify-content: center;
+}
+
+.slide-show button {
+  flex: 1;
+  background: none;
+  border: none;
+  font-size: xx-large;
+}
+
+.slide-frame {
+  width: 80%;
+  position: relative;
+  aspect-ratio: 1.5;
+  /* margin-inline: auto; */
+  border-radius: 0.5rem;
+  background: none;
+  overflow: hidden;
+}
+
+.slide-show button:hover {
+  background-color: #eee;
+}
+
+.slides-container {
+  position: relative;
+  left: 0;
+  height: 100%;
+  width: 500%;
+  display: flex;
+  /* gap: 0.5rem; */
+}
+
+.slides-container img {
+  height: 100%;
+  width: 20%;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none;
+}
+
+/* outline: 5px solid red; */

@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "slide-show",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "webpack-merge": "^6.0.1"
   },
   "dependencies": {
+    "@c8in4/drop-down-npm": "^1.0.0",
     "css-loader": "^7.1.2",
     "style-loader": "^4.0.0"
   }
