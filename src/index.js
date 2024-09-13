@@ -17,6 +17,13 @@ const images = [Img1, Img2, Img3, Img4, Img5]
 
 let currentSlidePosition = 0
 const lastSlidePosition = images.length - 1
+const slideDelay = 5000
+
+const previousImageButton = document.querySelector(".previous-image")
+previousImageButton.addEventListener("click", previousImage)
+
+const nextImageButton = document.querySelector(".next-image")
+nextImageButton.addEventListener("click", nextImage)
 
 renderCircles()
 
@@ -27,11 +34,7 @@ images.forEach((image, index) => {
   slidesContainer.append(imgElement)
 })
 
-const previousImageButton = document.querySelector(".previous-image")
-previousImageButton.addEventListener("click", previousImage)
-
-const nextImageButton = document.querySelector(".next-image")
-nextImageButton.addEventListener("click", nextImage)
+setInterval(nextImage, slideDelay)
 
 function nextImage() {
   currentSlidePosition++
