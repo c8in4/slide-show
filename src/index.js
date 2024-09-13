@@ -36,16 +36,16 @@ nextImageButton.addEventListener("click", nextImage)
 function nextImage() {
   currentSlidePosition++
   if (currentSlidePosition > lastSlidePosition) currentSlidePosition = 0
-  moveToImage()
+  moveToCurrentImage()
 }
 
 function previousImage() {
   currentSlidePosition--
   if (currentSlidePosition < 0) currentSlidePosition = lastSlidePosition
-  moveToImage()
+  moveToCurrentImage()
 }
 
-function moveToImage() {
+function moveToCurrentImage() {
   slidesContainer.style.left = `-${currentSlidePosition}00%`
   renderCircles()
 }
@@ -64,7 +64,7 @@ function renderCircles() {
   slideCircles.childNodes.forEach((circle, index) => {
     circle.addEventListener("click", () => {
       currentSlidePosition = index
-      moveToImage()
+      moveToCurrentImage()
     })
   })
 }
