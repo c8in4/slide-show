@@ -34,7 +34,11 @@ images.forEach((image, index) => {
   slidesContainer.append(imgElement)
 })
 
-setInterval(nextImage, slideDelay)
+let imageAdvancer = setInterval(nextImage, slideDelay)
+function resetImageAdvander() {
+  clearInterval(imageAdvancer)
+  imageAdvancer = setInterval(nextImage, slideDelay)
+}
 
 function nextImage() {
   currentSlidePosition++
@@ -51,6 +55,7 @@ function previousImage() {
 function moveToCurrentImage() {
   slidesContainer.style.left = `-${currentSlidePosition}00%`
   renderCircles()
+  resetImageAdvander()
 }
 
 function renderCircles() {
